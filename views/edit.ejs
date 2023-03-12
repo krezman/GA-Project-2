@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <%- include ('./partials/head.ejs') %>
+  <body>
+   
+    <h1>Edit This Review</h1>
+
+    <form class="edit" action="/store/<%= review.id %>?_method=PUT" method="POST">
+      Title <input type="text" name="title" placeholder="<%review.title%>" /><br />
+
+      Genre <input type="text" name="genre" placeholder="<%review.genre%>" /><br />
+
+      Review <textarea name="review" placeholder="<%=review.review%>" ></textarea>
+
+      Similar To <input type="text" name="similarTo" placeholder="<%=review.similarTo%>"/><br />
+
+      Streaming On <input type="text" name="streamingOn" placeholder="<%=review.streamingOn%>" /><br />
+
+      Tags <input type="text" name="tags" placeholder="<%review.tags%>" /><br />
+
+      Image <input type="text" name="img" placeholder="Place a <i>new</i> valid image url here." /><br />
+
+      <button id="editBtn" type="updatedReview">Edit Review</button>
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include ('./partials/head.ejs') %>
+	<body>
+		
+
+
+		<h1>New Movie Review</h1>
+    <form action="/movies" method="POST">
+
+      Title <input type="text" name="title" /><br />
+
+      Genre <input type="text" name="genre" /><br />
+
+      Review <textarea name="review" placeholder="Please write your review here."></textarea>
+
+      Similar To <input type="text" name="similarTo" /><br />
+
+      Streaming On <input type="text" name="streamingOn" /><br />
+
+      Tags <input type="text" name="tags" placeholder="Enter some key words to describe this movie." /><br />
+
+      Image <input type="text" name="img" placeholder="Place a valid image url here" /><br />
+
+
+
+      <button type="newReview"> Post Review</button>
+      
+    </form>
+		
+	</body>
+	</body>
+</html>

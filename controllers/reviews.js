@@ -20,29 +20,92 @@ const Review = require('../models/reviews.js')
 
 /// ROUTES/CONTROLLERS
 // INDEX
-
+router.get('/', (req, res)=>{
+  Review.find({}, (err, foundReviews) => {
+		if (err) {
+      console.log(err)}
+		// console.log(foundProducts)
+		res.render('index.ejs', {
+			reviews: foundReviews
+		})
+	})
+})
 
 // NEW
-
+router.get('/new', (req, res) => {
+  res.render('new.ejs')
+})
 
 
 // DESTROY
-
+router.delete('/:id', (req, res) => {
+  Review.findByIdAndDelete(req.params.id, (err, deletedReview) => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log(deletedReview)
+      res.redirect("/movies")
+    }
+  })
+})
 
 
 // UPDATE
-
+router.put('/:id', (req,res) =>{
+  Review.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,updatedReview) => {
+    if (err) {
+      console.log(err.message)
+      res.send(err)
+    } else {
+      console.log(updatedReview)
+    res.redirect(`/movies`)
+    }
+  })
+})
 
 
 // CREATE
-
+router.post('/', (req, res) => {
+  Review.create(req.body, (err, newReview) => {
+    if (err) {
+      console.log(err.message)
+    } else {
+      console.log(newReview)
+      res.redirect('/movies')
+    }
+  })
+})
 
 
 // EDIT
+router.get('/:id/edit', (req, res) => {
+	Review.findById(req.params.id, (err, foundReview) => {
+		if(err) {
+			console.log(err.message)
+			res.send(err)
+		} else {
+			res.render('edit.ejs', {
+				review: foundReview
+			})
+		}
+	})
+})
 
 
 
 // SHOW
+router.get('/:id', (req, res) => {
+  Review.findById(req.params.id, (err, foundReview) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.render('show.ejs', {
+        review: foundReview
+      })
+    }
+  })
+})
+
 
 
 
