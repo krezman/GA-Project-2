@@ -16,6 +16,18 @@ const db = mongoose.connection
 const Review = require('./models/reviews.js')
 
 const reviewsController = require('./controllers/reviews.js')
+const usersController = require('./controllers/users.js')
+
+const session = require('express-session')
+
+const SESSION_SECRET = process.env.SESSION_SECRET
+console.log(SESSION_SECRET)
+
+app.use(session({
+  secret: SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+}))
 
 ///IMPORTING METHOD-OVERRIDDE FOR DELETION
 const methodOverride = require('method-override')
@@ -31,6 +43,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
 app.use('/movies', reviewsController)
+app.use('/users', usersController)
 
 ///LINKING TO DATABASE
 mongoose.connect(process.env.DATABASE_URL)

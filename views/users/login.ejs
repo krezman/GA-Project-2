@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include ('../partials/head.ejs') %>
+  <body>
+    <h1>Login In</h1>
+    <form action="/users/login" method="POST">
+      <fieldset>
+        <label for="username">Username:</label>
+        <input type="text" name="username">
+      </fieldset>
+      <fieldset>
+        <label for="password">Password:</label>
+        <input type="password" name="password">
+      </fieldset>
+      <input type="submit" value="Login In">
+    </form>
+  </body>
+</html>
