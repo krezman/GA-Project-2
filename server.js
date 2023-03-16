@@ -53,7 +53,7 @@ app.use('/users', usersController)
 ///LINKING TO DATABASE
 const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(MONGODB_URI, {
-  useNewParser: false,
+  useNewUrlParser: false,
 })
 
 // DATABASE CONNECTION/ ERRORS
