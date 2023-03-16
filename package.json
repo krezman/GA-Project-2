@@ -1,6 +1,9 @@
 {
   "name": "ga-project-2",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.12.1"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {

@@ -51,7 +51,10 @@ app.use('/movies', reviewsController)
 app.use('/users', usersController)
 
 ///LINKING TO DATABASE
-mongoose.connect(process.env.DATABASE_URL)
+const MONGODB_URI = process.env.MONGODB_URI;
+mongoose.connect(MONGODB_URI, {
+  useNewParser: false,
+})
 
 // DATABASE CONNECTION/ ERRORS
 db.on('error', (err) => console.log(err.message + ' is mongo not running?'));
