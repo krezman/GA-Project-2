@@ -5,26 +5,26 @@
 		
 
 
-		<h1>New Movie Review</h1>
-    <form action="/movies" method="POST">
+		<h1 class="formTitle">New Movie Review</h1>
+    <form class="form" action="/movies" method="POST">
 
-      Title <input type="text" name="title" /><br />
+      Title <input id="newTitle" type="text" name="title" /><br />
 
-      Genre <input type="text" name="genre" /><br />
+      Genre <input id="newGenre" type="text" name="genre" placeholder="Please just put one combo of genres. i.e. Drama/Comedy" /><br />
 
       Review <textarea name="review" placeholder="Please write your review here."></textarea>
 
-      Similar To <input type="text" name="similarTo" /><br />
+      Similar To <input id="newSim" type="text" name="similarTo" placeholder="Please put full movie titles here." /><br />
 
-      Streaming On <input type="text" name="streamingOn" /><br />
+      Streaming On <input id="newStream" type="text" name="streamingOn" placeholder="Hulu, Netflix, HBO Max" /><br />
 
-      Tags <input type="text" name="tags" placeholder="Enter some key words to describe this movie." /><br />
+      Tags <input id="newTags" type="text" name="tags" placeholder="Enter some key words to describe this movie." /><br />
 
       Image <input type="text" name="img" placeholder="Place a valid image url here" /><br />
 
 
 
-      <button type="newReview"> Post Review</button>
+      <button id="createBtn" type="newReview">Post Review</button>
       
     </form>
 		

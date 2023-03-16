@@ -178,3 +178,128 @@ body {
   text-decoration: none;
   font-size: 25px;
 }
+
+#login {
+  font-family: 'Quicksand', sans-serif;
+  color: #FAEDE3;
+  font-size: 25px;
+}
+
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+fieldset {
+  border: 2px solid #FCE44D;
+  border-radius: 15px;
+  background-color: rgba(94, 97, 100, .3);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  color: #FCE44D;
+}
+
+#loginBtn {
+  background-color: rgba(94, 97, 100, .3);
+  color: #FCE44D;
+  border-radius: 15px;
+  width:100px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#loginAction {
+  display: flex;
+  justify-content: end;
+  margin-top: 15px;
+}
+
+.form {
+  border: 2px solid #FCE44D;
+  border-radius: 15px;
+  background-color: rgba(94, 97, 100, .3);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: #FCE44D;
+}
+
+#newTitle {
+  margin-right: 86%;
+}
+
+#newGenre {
+  margin-right: 80.5%;
+}
+
+textarea {
+  resize: none;
+    height: 100px;
+    width: 100%;
+}
+
+#newSim {
+  margin-right: 50%;
+}
+
+#newStream {
+  margin-right: 70%;
+}
+
+#newTags {
+  margin-right: 70%;
+}
+
+.formTitle {
+  font-family: 'Quicksand', sans-serif;
+  color: #FAEDE3;
+  font-size: 35px;
+}
+
+#createBtn {
+  background-color: rgba(94, 97, 100, .3);
+  color: #FCE44D;
+  border-radius: 15px;
+  width:200px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.registerPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+#registerBtn {
+  background-color: rgba(94, 97, 100, .3);
+  color: #FCE44D;
+  border-radius: 15px;
+  width:200px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#registerAction {
+  display: flex;
+  justify-content: end;
+  margin-top: 15px;
+}
+
+#register {
+  font-family: 'Quicksand', sans-serif;
+  color: #FAEDE3;
+  font-size: 25px;
+}

@@ -2,17 +2,26 @@
 <html lang="en" dir="ltr">
   <%- include ('../partials/head.ejs') %>
   <body>
-    <h1>Login In</h1>
-    <form action="/users/login" method="POST">
-      <fieldset>
-        <label for="username">Username:</label>
-        <input type="text" name="username">
-      </fieldset>
-      <fieldset>
-        <label for="password">Password:</label>
-        <input type="password" name="password">
-      </fieldset>
-      <input type="submit" value="Login In">
-    </form>
+    <div class="loginPage">
+      <div id="login">
+        <h1>Login In</h1>
+      </div>
+        <form action="/users/login" method="POST">
+          
+          <fieldset>
+            <label for="username">Username:</label>
+            <input type="text" name="username">
+
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+          </fieldset>
+
+        <div id="loginAction">
+          <button id="loginBtn" type="login">Login</button>
+        </div>
+
+        </form>
+      
+  </div>
   </body>
 </html>
