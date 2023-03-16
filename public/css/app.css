@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+
+#logo {
+  background-repeat: no-repeat;
+  float: left;
+  padding-left: 10px;
+  padding-top: 15px;
+  height: auto;
+  width:48%;
+  margin-bottom: 30px;
+}
+
+
+header {
+  background-color: rgba(21, 21, 21, .4);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  padding-top: 10px;
+}
+
+/* .bar1 {
+  background-color: #E9B872;
+  width: 90%;
+  height: 2px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 10px;
+} */
+
+
+.navOp {
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #FCE44D;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  padding: 37px 50px 27px 50px;
+}
+
+.navOp:hover {
+  background-color: rgba(21, 21, 21, .8);
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav {
+  position: relative;
+  text-align: right;
+  width: 100%;
+}
+
+body {
+  background-color: #1d2739;
+  margin: 0px;
+}
+
+#reviewImg {
+  position: relative;
+  padding-left: 10px;
+  height: 300px;
+  width: auto;
+}
+
+#reviews {
+  display: flex;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #FCE44D;
+  padding: 0;
+}
+
+#reviewContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.reviewsContainer {
+  background-color: rgba(94, 97, 100, .3);
+  display: flex;
+  justify-content: center;
+  border: 3px solid #435d8a;
+  border-radius: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+#showImg {
+  height: 500px;
+  width: auto;
+}
+
+#showParts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 28%;
+  margin-right: 28%;
+  margin-top: 25px;
+}
+
+#reviewWords {
+  display: flex;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  color: #FAEDE3;
+  background-color: rgba(94, 97, 100, .3);
+  border: 3px solid #FCE44D;
+  border-radius: 20px;
+  margin-left: 10%;
+  padding: 10px;
+}
+
+.reviewInfo {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3%;
+}
+
+#smalls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #FAEDE3;
+  background-color: rgba(94, 97, 100, .3);
+  border: 3px solid #FCE44D;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#showTitle {
+  font-family: 'Quicksand', sans-serif;
+  color: #FAEDE3;
+  text-align: center;
+}
+
+#actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#editBtn {
+  background-color: rgba(94, 97, 100, .3);
+  color: #FCE44D;
+  border-radius: 15px;
+  width:80px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#deleteBtn {
+  background-color: rgba(94, 97, 100, .3);
+  color: #FCE44D;
+  border-radius: 15px;
+  width:100px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  font-size: 25px;
+}

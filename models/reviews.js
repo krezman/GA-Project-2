@@ -5,7 +5,7 @@ const reviewSchema = new mongoose.Schema ({
   img: {type: String, require: true},
   genre: {type: String, require: false},
   review: {type: String},
-  streamingOn: {type: Array, default: "None", required: true},
+  streamingOn: {type: [String], default: ['Not streaming anywhere currently.']},
   tags: [String],
   similarTo: {type: Array, required: true}
 })

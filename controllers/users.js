@@ -44,6 +44,7 @@ router.get('/login', (req, res) => {
         const validLogin = bcrypt.compareSync(req.body.password, foundUser.password)
       if (validLogin) {
         req.session.currentUser = foundUser
+        console.log(foundUser)
         res.redirect('/movies')
         } else {
           res.send('Invalid username or paswword.')

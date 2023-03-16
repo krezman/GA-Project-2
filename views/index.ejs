@@ -2,24 +2,26 @@
 <html lang="en">
   <%- include ('./partials/head.ejs') %>
 <body>
-  
   <% for (let i = 0; i < reviews.length; i++){%>
 
     <div class="reviewsContainer">
 
 
       <div id="reviews">
-        <h2>
-          <%=reviews[i].title%>
-        </h2>
         
         <a href="/movies/<%=reviews[i].id%>">
           <img id="reviewImg" src="<%=reviews[i].img%>">
         </a>
-        
-        <h4>Genre: <%=reviews[i].genre%></h4>
-        <h4>Streaming On: <%=reviews[i].streamingOn.join(', ')%> </h4>
-        <h4>Tags: <%=reviews[i].tags.join(', ')%></h4>
+        <div id="reviewContent">
+          <h2>
+            <%=reviews[i].title%>
+          </h2>
+          <h4>Genre: <%=reviews[i].genre%></h4>
+          <h4>Streaming On: <%=reviews[i].streamingOn.join(', ')%> </h4>
+          <h4>Tags: <%=reviews[i].tags.join(', ')%></h4>
+
+          
+        </div>
       </div>
 
     

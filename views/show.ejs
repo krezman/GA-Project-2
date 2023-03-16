@@ -5,30 +5,35 @@
     </head>
     <body>
       
-        <h1><%=review.title%> Review</h1>
+        <h1 id="showTitle"><%=review.title%> Review</h1>
 
-        <img src="<%=review.img; %>"> </br>
+      
     <div id="showParts">
-      <h4>Review: <%=review.review%></h4>
-      <h4>Genre: <%=review.genre%></h4>
-      <h4>Streaming On: <%=review.streamingOn.join(', ')%> </h4>
-      <h4>Tags: <%=review.tags.join(', ')%></h4>
-      <h4>Similar to: <%=review.similarTo%></h4>
-    </div>
+      
+      <div class="reviewInfo">
+        <img id="showImg" src="<%=review.img; %>"> </br>
+        <h4 id="reviewWords">Review: <%=review.review%></h4>
+      </div>
 
-  
-            
+      <div id="smalls">
+        <h4 id="genre">Genre: <%=review.genre%></h4>
+        <h4 id="streamingOn">Streaming On: <%=review.streamingOn.join(', ')%> </h4>
+        <h4 id="tags">Tags: <%=review.tags.join(', ')%></h4>
+        <h4 id="similarTo">Similar to: <%=review.similarTo.join(', ')%></h4>
+      </div>
+
     <div id="actions">
       
-
-
         <form action="/movies/<%=review.id%>/edit">
             <button id="editBtn" type="Edit">Edit</button>
         </form>
         
         <form action="/movies/<%=review.id%>?_method=DELETE" method="POST">
           <button id="deleteBtn" type="Delete">Delete</button>
-        </div>
+
+    </div>  
+
+    </div>
 
     </body>
 </html>

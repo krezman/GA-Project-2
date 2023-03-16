@@ -17,6 +17,19 @@ const Review = require('../models/reviews.js')
   SHOW -- /movies/:id -- GET -- show.ejs
 */
 
+// CUSTOM MIDDLEWARE TO AUTHORIZE LOGGED IN USERS
+const authRequired = (req, res, next) => {
+  if (req.session.currentUser) {
+    // a user is signed in
+    next()
+    // next is a part of express
+    //it does what is says
+  } else {
+    res.send('You must be signed in!')
+  
+  }
+}
+
 
 /// ROUTES/CONTROLLERS
 // INDEX
@@ -38,7 +51,7 @@ router.get('/new', (req, res) => {
 
 
 // DESTROY
-router.delete('/:id', (req, res) => {
+router.delete('/:id', authRequired, (req, res) => {
   Review.findByIdAndDelete(req.params.id, (err, deletedReview) => {
     if (err) {
       console.log(err)
@@ -78,7 +91,7 @@ router.post('/', (req, res) => {
 
 
 // EDIT
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', authRequired, (req, res) => {
 	Review.findById(req.params.id, (err, foundReview) => {
 		if(err) {
 			console.log(err.message)
