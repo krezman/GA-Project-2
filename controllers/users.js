@@ -19,7 +19,7 @@ router.post('/register', (req, res) => {
   req.body.password = bcrypt.hashSync(req.body.password, salt)
   User.findOne({username: req.body.username}, (err, userExists) => {
     if (userExists) {
-      res.send('Sorry that user name is taken.')
+      res.render('errors.ejs')
     } else {
       User.create(req.body, (err, createdUser) => {
         console.log(createdUser)
@@ -47,10 +47,10 @@ router.get('/login', (req, res) => {
         console.log(foundUser)
         res.redirect('/movies')
         } else {
-          res.send('Invalid username or paswword.')
+          res.render('error.ejs')
         }
       } else {
-        res.send('Invalid username or password.')
+        res.render('error.ejs')
       }
     })
   })

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Home</title>
+  <header id="homeHeader">
+    <a href="/">
+    <img id="logo" src='https://i.imgur.com/SffhBfh.png'>
+  </a>
+    <nav>
+      <ul class="navBar">
+        <li>
+          <a class="navOp" href="/movies">Movies</a>
+          <a class="navOp" href="/movies/new">Create A Review</a>
+          <a class="navOp" href="/users/register">Create Account</a>
+          <a class="navOp" href="/users/login">Login</a>
+          <a class="navOp" href="/users/logout">Logout</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  </head>
+<body class="home">
+  <div class="errorPage">
+  <h1 class="homeTitle">Sorry, you have to have an account with us to perform that action.<br />Please make an account first.</h1>
+
+  <form action="/users/register">
+    <button id="begin" type="begin">Create an Account</button>
+</form>
+
+</div>
+
+</body>
+</html>

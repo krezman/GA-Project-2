@@ -25,7 +25,7 @@ const authRequired = (req, res, next) => {
     // next is a part of express
     //it does what is says
   } else {
-    res.send('You must be signed in!')
+    res.render('visitor.ejs')
   
   }
 }

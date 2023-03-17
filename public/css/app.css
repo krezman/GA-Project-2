@@ -15,7 +15,7 @@
 
 
 header {
-  background-color: rgba(21, 21, 21, .4);
+  background-color: rgba(21, 21, 21, .3);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -24,15 +24,56 @@ header {
   padding-top: 10px;
 }
 
-/* .bar1 {
-  background-color: #E9B872;
-  width: 90%;
-  height: 2px;
-  display: inline-block;
-  text-align: center;
-  margin-bottom: 10px;
-} */
+#homeHeader {
+  background-color: rgba(118, 152, 179, .3);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  padding-top: 10px;
+}
 
+.home {
+  margin: 0;
+  background-color: rgba(14, 19, 31, 1);
+}
+
+#homeImg {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 8px 8px #1d2739;
+}
+
+.homeTitle {
+  font-family: 'Quicksand', sans-serif;
+  color: #FAEDE3;
+  font-size: 35px;
+  text-align: center;
+}
+
+#begin {
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 1px;
+  color:#FAEDE3;
+  font-size: 25px;
+  font-weight: 900;
+  width: 200px;
+  background-color: rgb(83, 221, 108);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.flagStatment {
+  font-family: 'Quicksand', sans-serif;
+  color: #FAEDE3;
+  font-size: 28px;
+  text-align: center;
+}
 
 .navOp {
   text-decoration: none;
@@ -41,7 +82,7 @@ header {
   color: #FCE44D;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
-  padding: 37px 50px 27px 50px;
+  padding: 37px 30px 27px 30px;
 }
 
 .navOp:hover {
@@ -66,13 +107,13 @@ body {
 
 #reviewImg {
   position: relative;
-  padding-left: 10px;
   height: 300px;
   width: auto;
 }
 
 #reviews {
   display: flex;
+  flex-direction: row;
   font-family: 'Josefin Sans', sans-serif;
   color: #FCE44D;
   padding: 0;
@@ -112,6 +153,7 @@ body {
   margin-left: 28%;
   margin-right: 28%;
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 #reviewWords {
@@ -144,7 +186,7 @@ body {
   border: 3px solid #FCE44D;
   border-radius: 20px;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 #showTitle {
@@ -161,7 +203,7 @@ body {
 
 #editBtn {
   background-color: rgba(94, 97, 100, .3);
-  color: #FCE44D;
+  color: #FAEDE3;
   border-radius: 15px;
   width:80px;
   font-family: 'Quicksand', sans-serif;
@@ -169,14 +211,22 @@ body {
   font-size: 25px;
 }
 
+#editBtn:hover {
+  background-color: rgb(83, 221, 108);
+}
+
 #deleteBtn {
-  background-color: rgba(94, 97, 100, .3);
-  color: #FCE44D;
+  background-color: rgba(21, 21, 21, .8);
+  color: #FAEDE3;
   border-radius: 15px;
   width:100px;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
   font-size: 25px;
+}
+
+#deleteBtn:hover {
+  background-color: rgba(186, 27, 29, .3);
 }
 
 #login {
@@ -189,8 +239,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   margin-left: 35%;
   margin-right: 35%;
+  margin-bottom: 20%;
+  padding-top: 5%;
 }
 
 fieldset {
@@ -214,6 +267,11 @@ fieldset {
   font-size: 25px;
 }
 
+#loginBtn:hover {
+  background-color: rgb(83, 221, 108);
+  color:#FAEDE3
+}
+
 #loginAction {
   display: flex;
   justify-content: end;
@@ -227,9 +285,17 @@ fieldset {
   padding: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   color: #FCE44D;
+}
+
+label {
+  font-size: 14px;
+}
+#newSpace {
+  margin-bottom: 15px;
 }
 
 #newTitle {
@@ -237,7 +303,7 @@ fieldset {
 }
 
 #newGenre {
-  margin-right: 80.5%;
+  width: 10.2%;
 }
 
 textarea {
@@ -247,15 +313,15 @@ textarea {
 }
 
 #newSim {
-  margin-right: 50%;
+  width: 40%;
 }
 
 #newStream {
-  margin-right: 70%;
+  width: 37.8%;
 }
 
 #newTags {
-  margin-right: 70%;
+  width: 42.5%;
 }
 
 .formTitle {
@@ -274,22 +340,34 @@ textarea {
   font-size: 25px;
 }
 
+#createBtn:hover {
+  background-color: rgb(83, 221, 108);
+  color:#FAEDE3
+}
+
 .registerPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 35%;
   margin-right: 35%;
+  margin-bottom: 20%;
+  padding-top: 5%;
 }
 
 #registerBtn {
   background-color: rgba(94, 97, 100, .3);
   color: #FCE44D;
   border-radius: 15px;
-  width:200px;
+  width:125px;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
   font-size: 25px;
+}
+
+#registerBtn:hover {
+  background-color: rgb(83, 221, 108);
+  color:#FAEDE3
 }
 
 #registerAction {
@@ -298,8 +376,18 @@ textarea {
   margin-top: 15px;
 }
 
+
 #register {
   font-family: 'Quicksand', sans-serif;
   color: #FAEDE3;
   font-size: 25px;
+}
+
+
+.errorPage {
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
 }

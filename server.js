@@ -40,7 +40,7 @@ app.use(express.json())
 
 /// HOME ROUTE FOR HEROKU
 app.get('/', (req, res) => {
-  res.redirect('/movies')
+  res.render('home.ejs')
 })
 
 /// MIDDLEWARE
@@ -72,8 +72,7 @@ app.get('/reviews/seed', (req, res) => {
         review: 'This is an awesome movie for those who really enjoy epic tales with tall-tale elements interwoven into the fabric of the story itself. It is based on a true story narrated by a man who is recounting his childhood and the inception of his love for the game of golf. He focuses on his childhood idol who was a natural talent in the game of golf, Rannulph Junuh (played by Matt Damon), before he was sent off to go fight in WWI. Now that he has returned and there is a local tournament being held he is apprehensively willed back into the game by his local community and finds more than just his club stroke by the end of it all. Not without the help of a mysterious caddie though played by Will Smith.',
         tags: ['Epic', 'Sports', 'Golf', 'Uplifting', 'redemption', 'For the love of the game'],
         similarTo: ['The Greatest Game Ever Played', 'Big Fish', 'Tin Cup', 'The Natural']
-      }
-      , {
+      }, {
         title: 'A River Runs Through It',
         img: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTJRW1bQ-aRELKWiO9Ev-qx27_ri9jP5xa7RsRCLwGBFYjqjjb_',
         genre: 'Drama/Indie Film',
