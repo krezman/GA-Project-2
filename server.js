@@ -88,6 +88,38 @@ app.get('/reviews/seed', (req, res) => {
         streamingOn: ['Hulu', 'Amazone Prime', 'Sling TV', 'YouTube', 'Roku', 'Paramount+'],
         tags: ['Space', 'Sacrifice', 'Women Empowerment', 'Adventure'],
         similarTo: ['The Martian', 'Gravity', '2001: A Space Odyssey', 'Inception']
+      } , {
+        title: 'Forest Gump',
+        img: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQvJZAr8HsQLqTb0cnw-2SaBI3-8GbmHLz778B-N7PhQZAvAcAU',
+        genre: 'Epic/Drama',
+        review: 'A young man from Alabama is thrust into an uncertain world like most of us yet he handles all obstacles that are thrown at him with effortless class despite the cards of life that he was dealt. This movie is filled with war, friendship, love and loss so get ready for an epic adventure.',
+        streamingOn: ['Netflix'],
+        tags: ['Adventure', 'War', 'Running', 'Friendship', 'Shrimp', 'Lt. Dan'],
+        similarTo: ['The Shawshank Redemption', 'Castaway', 'Good Morning, Vietnam', 'A Beautiful Mind']
+      } , {
+        title: 'The Prestige',
+        img: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTRJH8xMbcPS3B6WoHjsjwghwn4seBH0VPxxKEBtUEBj8QS4S8x',
+        genre: 'Drama/Thriller',
+        review: 'Two up-and-coming magicians are hungry for success and will stop at nothing to achieve it. The movie focuses on the growing rivalry between these two magicians when one of them truly believes that he has been slighted by the other. This movie has elements of science-fiction as well as romance, although the romance is not exclusive to people because we see how the love and desire for success consumes them both.',
+        streamingOn: ['Hulu'],
+        tags: ['Magic', 'Rivalry', 'Science', 'Secrets', 'Obsession'],
+        similarTo: ['The Illusionist', 'Inception', 'Shutter Island', 'Memento']
+      } , {
+        title: 'As Good As It Gets',
+        img: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRRIVGCywPutIbBFUSLPFOgUzz929zlagwD8kMxItxhcUUcD6mX',
+        genre: 'Romance/Comedy',
+        review: 'A well off writer living in the big city also has big problems, with everyone. Jack Nicholson plays this cranky writer who is plagued with OCD but he somehow ends up making every other person’s life that he encounters an absolute nightmare. He lives his daily life the exactly the same as the one before and that is not excluding when, where and who serves him food. One deviation for lead to an absolute meltdown. This all begins to change and his perspective on the world slowly softens as he finally allows people to enter into his true psyche.',
+        streamingOn: ['Hulu'],
+        tags: ['Mental Illness', 'Cranky', 'Writers', 'Love', 'Funny'],
+        similarTo: ["Something's Gotta Give", 'Jerry Maguire', 'Terms of Endearment', 'Spanglish']
+      } , {
+        title: 'Jojo Rabbit',
+        img: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQoEwNJqlyB8C_7sEvqqJI0JeVjYbV21TYwUxPPi1tkfA9qF3pe',
+        genre: 'Comedy/Drama',
+        review: 'This movie follows a young man growing up in WWII Germany near the end of the war and it is apparent pretty quickly that he is severely lacking a father figure. His own father has gone off to fight in the war and is most likely not coming back but his mother is a rambunctious and livelily woman who is too positive for the world shes caged in. To fill the void of his absent father the boy finds the next closest thing to his father, or at least what he thought his father would embody. He creates himself an imaginary friend and with him discovers more about himself by through the disparities of his friendhsip.',
+        streamingOn: ['Hulu', 'Sling TV'],
+        tags: ['WWII', 'Dark Comedy', 'Germany', 'Coming-of-age', 'Friendship'],
+        similarTo: ['The Book Thief', 'Knives Out', 'Richard Jewell', 'The Monuments Men']
       }
     ], (err, data) => {
       res.redirect('/movies')

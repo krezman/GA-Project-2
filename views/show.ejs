@@ -11,7 +11,11 @@
     <div id="showParts">
       
       <div class="reviewInfo">
+        <% if (review.img === '') { %>
+            <img id="reviewImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/2048px-No_image_available.svg.png">
+          <% } else { %>
         <img id="showImg" src="<%=review.img; %>"> </br>
+        <% } %>
         <h4 id="reviewWords">Review: <%=review.review%></h4>
       </div>
 
@@ -35,6 +39,8 @@
     </div>  
 
     </div>
+
+    <%- include ('./partials/footer.ejs') %>
 
     </body>
 </html>

@@ -28,7 +28,7 @@
 
       <div id="newSpace">
       Streaming On <input id="newStream" type="text" name="streamingOn" placeholder="Hulu, Netflix, HBO Max" /><br />
-      <label>If there are no streaming services currently, leave this field blank.</label>
+      <label>If there are no streaming services currently, say: Not streaming anywhere currently.</label>
       </div>
 
       <div id="newSpace">
@@ -36,14 +36,19 @@
       <label>Enter some key words to describe this movie.</label>
       </div>
 
-      Image <input type="text" name="img" placeholder="Place a valid image url here." /><br />
+      <div id="newSpace">
+      Image <input id="newImg" type="text" name="img" placeholder="Place a valid image url here." /><br />
+      <label>Valid image URL is REQUIRED to post a review.</label>
+      </div>
 
 
 
       <button id="createBtn" type="newReview">Post Review</button>
       
     </form>
+
+    <%- include ('./partials/footer.ejs') %>
 		
 	</body>
-	</body>
+	
 </html>

@@ -8,10 +8,21 @@
 
 
       <div id="reviews">
+
+        <div id="reviewImgContainer">
+          <% if (reviews[i].img === '') { %>
+          <a href="/movies/<%=reviews[i].id%>">
+            <img id="reviewImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/2048px-No_image_available.svg.png">
+          </a>
+          <% } else { %>
+          <a href="/movies/<%=reviews[i].id%>">
+            <img id="reviewImg" src="<%=reviews[i].img%>">
+          </a>
+          <% } %>
+        </div>
+
+
         
-        <a href="/movies/<%=reviews[i].id%>">
-          <img id="reviewImg" src="<%=reviews[i].img%>">
-        </a>
         <div id="reviewContent">
           <h2>
             <%=reviews[i].title%>
@@ -19,14 +30,17 @@
           <h4>Genre: <%=reviews[i].genre%></h4>
           <h4>Streaming On: <%=reviews[i].streamingOn.join(', ')%> </h4>
           <h4>Tags: <%=reviews[i].tags.join(', ')%></h4>
-
-          
         </div>
+
+        
       </div>
 
     
     </div>
     
   <%}%>
+
+
+  <%- include ('./partials/footer.ejs') %>
 </body>
 </html>
