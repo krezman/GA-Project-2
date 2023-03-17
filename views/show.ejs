@@ -21,8 +21,15 @@
 
       <div id="smalls">
         <h4 id="genre">Genre: <%=review.genre%></h4>
+
+        <% if (review.streamingOn === '') { %>
+          <h4 id="streamingOn">Streaming On: Not Streaming anywhere Currently.</h4>
+        <% } else { %>
         <h4 id="streamingOn">Streaming On: <%=review.streamingOn.join(', ')%> </h4>
+        <% } %>
+
         <h4 id="tags">Tags: <%=review.tags.join(', ')%></h4>
+        
         <h4 id="similarTo">Similar to: <%=review.similarTo.join(', ')%></h4>
       </div>
 

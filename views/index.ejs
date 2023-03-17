@@ -28,7 +28,13 @@
             <%=reviews[i].title%>
           </h2>
           <h4>Genre: <%=reviews[i].genre%></h4>
-          <h4>Streaming On: <%=reviews[i].streamingOn.join(', ')%> </h4>
+
+          <% if (reviews[i].streamingOn < 1) { %>
+          <h4 id="streamingOn">Streaming On: Not Streaming anywhere Currently.</h4>
+        <% } else { %>
+        <h4 id="streamingOn">Streaming On: <%=reviews[i].streamingOn.join(', ')%> </h4>
+        <% } %>
+
           <h4>Tags: <%=reviews[i].tags.join(', ')%></h4>
         </div>
 
